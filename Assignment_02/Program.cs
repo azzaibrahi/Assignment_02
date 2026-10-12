@@ -318,6 +318,34 @@
 
 
             //22- Write a program in C# Sharp to count the frequency of each element of an array.
+            Console.Write("Enter the number of elements: ");
+            int f = int.Parse(Console.ReadLine());
+
+            int[] arr7 = new int[f];
+            Console.WriteLine("Enter the elements:");
+            for (int e = 0; e < f; e++)
+                arr7  [e ] = int.Parse(Console.ReadLine());
+
+        bool[] counted = new bool[f];   
+
+            Console.WriteLine("Frequency of each element:");
+            for (int e = 0; e < f; e++)
+            {
+                if (counted[e])
+                                  continue;   
+
+                int count = 1;
+                for (int w = e + 1; w < f; w++)
+                {
+                    if (arr7[e] == arr7[w])
+                    {
+                        count ++;
+                        counted[w] = true;
+                    }
+                }
+
+                Console.WriteLine(arr7 [e] + " occurs " + count + " time(s)");
+            }
             //23- Write a program in C# Sharp to find maximum and minimum element in an array
             int[] arr3 = new int[4];
             Console.WriteLine("Enter 4 elements for the array:");
